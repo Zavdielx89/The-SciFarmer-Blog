@@ -1,7 +1,13 @@
+import { previewData } from "next/headers";
+
 export default function HomePage() {
+  if (previewData()) {
+    return <div>Preview mode is enabled</div>;
+  }
+
   return (
     <div>
-      <h1 className="text-4xl">Welcome to the Blog Test</h1>
+      <h1>Not in Preview Mode</h1>
     </div>
   );
 }

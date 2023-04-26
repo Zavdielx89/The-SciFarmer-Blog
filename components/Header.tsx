@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import logo from "../public/icons8-farm-64.png";
 
 function Header() {
   return (
@@ -8,7 +9,7 @@ function Header() {
         <Link href="/">
           <Image
             className="rounded-full"
-            src="https://img.icon8.com/arcade/512/farm.png"
+            src={logo}
             width={50}
             height={50}
             alt="logo"
@@ -16,7 +17,14 @@ function Header() {
         </Link>
         <h1>The SciFarmer</h1>
       </div>
-      <div></div>
+      <div>
+        <Link
+          href="http://www.google.com"
+          className="px-5 py-3 test-sm md:text-base bg-gray-900 text-[#F7AB0A] flex items-center rounded-full"
+        >
+          Check Out Google.com
+        </Link>
+      </div>
     </header>
   );
 }
